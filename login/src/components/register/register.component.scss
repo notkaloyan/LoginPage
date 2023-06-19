@@ -1,0 +1,45 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    margin-top: -100px;
+}
+
+
+.inputs{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+.inputsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    max-height: 500px;
+    height: 100%;
+    gap: 32px;
+    padding: 32px;
+    border: 1px solid black;
+}
+button{
+width: 100px;
+}
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    background-color:#a94442; /* red */
+  }
+  .alert {
+    background-color: #fed3d3; 
+    color: #820000;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 0.8px;
+  }

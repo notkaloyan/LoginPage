@@ -1,0 +1,11 @@
+<nav class="navbar">
+    <ul class="nav-links">
+      <div class="menu">
+
+        <li><a href="/home">Home</a></li>
+        <li *ngIf="!authernticationService.isLoggedIn" ><a href="/login">Login</a></li>
+        <li *ngIf="!authernticationService.isLoggedIn"><a href="/register">Register</a></li>
+        <li *ngIf="authernticationService.isLoggedIn" (click)="logout"><a href="/">Logout</a></li>
+      </div>
+    </ul>
+  </nav>

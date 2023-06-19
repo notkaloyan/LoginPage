@@ -1,0 +1,39 @@
+<h3>Register</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="inputsContainer">
+        <div class="inputs">
+            <label>USERNAME</label>
+            <input formControlName="username" type="text" name="username">
+            <p class="alert" *ngIf="form.controls['username'].hasError('required')">Username is required</p>
+        </div>
+        <div class="inputs">
+            <label for="password">PASSWORD</label>
+            <input formControlName="password" type="password" name="password">
+            <p class="alert" *ngIf="form.controls['password'].hasError('required')">Password is required</p>
+            <p class="alert" *ngIf="form.controls['password'].hasError('minlength')">Min length is 8!</p>
+        </div>
+        <div class="inputs">
+            <label for="firstName">FIRST NAME</label>
+            <input formControlName="firstName" type="text" name="firstName">
+            <p class="alert" *ngIf="form.controls['firstName'].hasError('required')">First name is required</p>
+
+        </div>
+        <div class="inputs">
+            <label for="lastName">LAST NAME</label>
+            <input formControlName="lastName" type="text" name="lastName">
+            <p class="alert" *ngIf="form.controls['lastName'].hasError('required')">Last name is required</p>
+
+        </div>
+        <div class="inputs">
+            <label for="email">EMAIL</label>
+            <input formControlName="email" type="email" name="email">
+            <p class="alert" *ngIf="form.controls['email'].hasError('required')">Email is required</p>
+            <p class="alert" *ngIf="form.controls['email'].hasError('email')">Please, input existing email!</p>
+
+        </div>
+        <div class="inputs">
+            <button [disabled]="form.invalid" >Register</button>
+        </div>
+        
+    </div>
+    </form>

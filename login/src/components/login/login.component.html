@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<div class="inputsContainer">
+    <div class="inputs">
+        <label>USERNAME</label>
+        <input formControlName="username" type="text" name="username">
+    </div>
+    <div class="inputs">
+        <label for="password">PASSWORD</label>
+        <input formControlName="password" type="password" name="password">
+    </div>
+    <div class="inputs">
+        <button [disabled]="form.invalid" >Login</button>
+        <button type="button" *ngIf="!authService.isLoggedIn" (click)="onRegisterClick()">Register</button>
+    </div>
+    <div id="alert" *ngIf="form.hasError('unauthenticated')">Incorrect credentials!</div>
+    
+</div>
+</form>
